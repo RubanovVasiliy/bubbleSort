@@ -33,9 +33,14 @@ int main(void) {
 	printf("Input length of the array: ");
 	int size;
 	scanf("%d", &size);
+	while(size<=0)
+	{
+	 printf("Enter a size greater than 0\n");
+	 scanf("%d",&size);
+	}
 
 	printf("Input elements of array: ");
-	int arr[size];
+	int arr[size]; //I think this won't work before C99 versions
 	inputArray(arr, size);
 
 	bubbleSort(arr, size);
